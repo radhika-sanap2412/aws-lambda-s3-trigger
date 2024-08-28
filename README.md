@@ -1,4 +1,4 @@
-#1. AWS Lambda S3 Bucket Listing Tutorial
+# AWS Lambda S3 Bucket Listing Tutorial 
 
 This tutorial guides you through the process of creating an AWS Lambda function that lists all your S3 buckets.
 
