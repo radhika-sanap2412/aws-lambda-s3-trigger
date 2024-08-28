@@ -11,38 +11,39 @@ This tutorial guides you through the process of creating an AWS Lambda function 
 
 ## Steps
 
-### 1. Create an S3 Bucket
+### Step 1: Create a Lambda Function
 
-Create an S3 bucket that will be used in this tutorial.
+First, navigate to the AWS Lambda console and create a new Lambda function.
 
-![S3 Buckets Display](.listing_bucket_names_using_lambda/s3_buckets_display.jpg)
+![Create Lambda Function](listing_bucket_names_using_lambda/create_lambda_function.jpg)
 
-### 2. Create a Lambda Function
+### Step 2: Configure IAM Permissions
 
-- Go to AWS Lambda in the AWS Management Console.
-- Click on "Create function."
-- Choose "Author from scratch."
-- Fill in the function name and choose Python 3.12 as the runtime.
-- Under "Permissions," choose "Create a new role with basic Lambda permissions."
+Ensure your Lambda function has the necessary IAM permissions to access S3.
 
-![Create Lambda Function](./create_lambda_function.jpg)
+![IAM Permissions](listing_bucket_names_using_lambda/IAM_permission_screen.jpg)
 
-### 3. Set Lambda Function Code
+### Step 3: Create the Lambda Role
 
-- After the Lambda function is created, set up the code for the function.
+You will need to create a role that includes permissions for S3 access.
 
-```python
-import json
-import boto3
+![IAM List of Permissions](listing_bucket_names_using_lambda/iam_list_of_perm.jpg)
 
-s3 = boto3.resource('s3')
+### Step 4: Add Your Code
 
-def lambda_handler(event, context):
-    bucket_list = [] 
-    for bucket in s3.buckets.all():
-        print(bucket.name)
-        bucket_list.append(bucket.name)
-    return {
-        'StatusCode': 200,
-        'body': bucket_list
-    }
+Add your Python code to list S3 buckets.
+
+![Lambda Code](listing_bucket_names_using_lambda/lambda_create_function_screen.jpg)
+
+### Step 5: Execute the Function
+
+After setting everything up, execute your Lambda function.
+
+![Execution Result](listing_bucket_names_using_lambda/execution_screen.jpg)
+
+### Step 6: View S3 Buckets
+
+Check the S3 buckets to see if the function has listed them correctly.
+
+![S3 Buckets Display](listing_bucket_names_using_lambda/s3_buckets_display.jpg)
+
