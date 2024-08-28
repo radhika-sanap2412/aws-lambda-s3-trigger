@@ -5,8 +5,6 @@ This tutorial guides you through the process of creating an AWS Lambda function 
 ## Prerequisites
 
 - AWS Account
-- Basic knowledge of AWS Lambda and S3
-- AWS CLI installed and configured
 - Access to AWS Management Console
 
 ## Steps
