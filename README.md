@@ -15,7 +15,7 @@ This tutorial guides you through the process of creating an AWS Lambda function 
 
 Create an S3 bucket that will be used in this tutorial.
 
-![S3 Buckets Display](./s3_buckets_display.jpg)
+![S3 Buckets Display](.listing_bucket_names_using_lambda/s3_buckets_display.jpg)
 
 ### 2. Create a Lambda Function
 
